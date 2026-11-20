@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>ChatGpt Startup Animation v1</title>
+  <link rel="preload" as="image" href="./assets/pearl.webp">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./intro.js" defer></script>
+  <script src="./portable.js" defer></script>
+</head>
+<body class="portable">
+  <div id="workspace" hidden></div>
+<section id="intro" class="intro" data-stage="idle" aria-label="软件启动动画">
+    <div class="intro-wallpaper" aria-hidden="true"></div>
+    <canvas id="cinema" aria-hidden="true"></canvas>
+    <canvas id="portrait-particles" aria-hidden="true"></canvas>
+    <button type="button" class="skip" id="skip-intro">跳过片头 <kbd>Esc</kbd></button>
+    <div class="intro-splash">
+      <span class="sigil" aria-hidden="true"></span>
+      <div>ChatGpt Startup Animation</div>
+      
+    </div>
+    <div class="scanner">
+      <div class="scan-header">
+        <span class="scan-brand"><span class="sigil" aria-hidden="true"></span> Startup Animation</span>
+        <span>工作台初始化</span>
+      </div>
+      <div class="scan-frame">
+        <div class="scan-steps">
+          <ol>
+            <li>读取本地设置</li>
+            <li>初始化工作台</li>
+            <li>生成星图</li>
+          </ol>
+        </div>
+        <div class="scan-core">
+          <span>工作台载入中</span>
+          <strong id="scan-number">00<small>%</small></strong>
+        </div>
+        <div class="scan-meter" aria-hidden="true"><div></div></div>
+      </div>
+    </div>
+    <div class="welcome">
+      <span class="sigil" aria-hidden="true"></span>
+      <p id="welcome-name">欢迎回来</p>
+      <h2 id="welcome-title">启程</h2>
+      <small id="welcome-destination"></small>
+    </div>
+    <div class="handoff-status" id="handoff-status" hidden>
+      <p id="handoff-message" role="status"></p>
+      <button type="button" id="handoff-retry" hidden>重试</button>
+      <button type="button" id="handoff-close" hidden>关闭片头</button>
+    </div>
+  </section>
+</body>
+</html>
